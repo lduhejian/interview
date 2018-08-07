@@ -1,6 +1,6 @@
 <?php
 
-  function bubbleSort($arr) {
+  function bubbleSort(&$arr) {
     for ($i = 0; $i < count($arr); $i ++) {
       for ($j = count($arr) - 1; $j > $i; $j --) {
         if ($arr[$j] < $arr[$j - 1]) {
@@ -14,7 +14,7 @@
   }
 
   $arr = [3, 2, 5, 1];
-  $sorted = bubbleSort($arr);
-  echo json_encode($sorted);
+  bubbleSort($arr);
+  echo json_encode($arr);
 
  ?>
